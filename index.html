@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Development of web and desktop systems | Desarrollo de sistemas web y escritorio">
     <meta name="author" content="Milu System">
-    
-    <link data-default-icon="http://www.milusystem.com/assets/img/favicon.ico" data-badged-icon="http://www.milusystem.com/assets/img/favicon.ico" href="http://www.milusystem.com/assets/img/favicon.ico">
-    <link rel="shortcut icon" href="http://www.milusystem.com/assets/img/favicon.ico"/>
+
+    <link data-default-icon="http://www.milusystem.com/assets/img/favicon.ico"
+        data-badged-icon="http://www.milusystem.com/assets/img/favicon.ico"
+        href="http://www.milusystem.com/assets/img/favicon.ico">
+    <link rel="shortcut icon" href="http://www.milusystem.com/assets/img/favicon.ico" />
     <link rel="canonical" href="https://milusystem.com/" />
 
     <title>Milu System</title>
@@ -25,9 +27,37 @@
     <link href="css/styles.css" rel="stylesheet" />
 
     <style>
+        #cuatro {
+            position: relative;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            overflow: hidden;
+            background: linear-gradient(90deg, #fff, #fff, #fff);
+            background-repeat: no-repeat;
+            background-size: 80%;
+            animation: animate 5s linear infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: rgba(255, 255, 255, 0);
+        }
+
+        @keyframes animate {
+            0% {
+                background-position: -500%;
+            }
+
+            100% {
+                background-position: 500%;
+            }
+        }
+
+
         @font-face {
             font-family: myFirstFont;
             src: url(assets/font/doctor-glitch_1.woff2);
+        }
+
+        #cuatro {
+            font-family: myFirstFont;
         }
 
         #titulo {
@@ -64,7 +94,7 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-10 align-self-end">
-                    <h1 id="titulo" class="text-uppercase text-white font-weight-bold">M I L U <p> </p> S Y S T E M</h1>
+                    <h1 id="cuatro" class="text-uppercase text-white font-weight-bold">M I L U <p> </p> S Y S T E M</h1>
                     <hr class="divider my-4" />
                 </div>
                 <div class="col-lg-8 align-self-baseline">
@@ -141,7 +171,7 @@
                         <div class="col-lg-7 mx-auto">
                             <h1>Milu System pricing table</h1>
                             <p>Different plans for different businesses.<br>Choose the most
-                                    appropriate for you.</p>
+                                appropriate for you.</p>
                         </div>
                     </div>
                 </header>
@@ -153,7 +183,7 @@
                     <!-- Pricing Table-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <div class="bg-dark p-5 rounded-lg shadow">
-                            <h1 class="h6 text-uppercase font-weight-bold text-light mb-4">Basic</h1>
+                            <h1 class="h6 text-uppercase font-weight-bold text-light mb-4">Time Management</h1>
                             <h2 class="h1 font-weight-bold text-light ">$29.99<span
                                     class="text-small text-light font-weight-normal ml-2">/ month</span></h2>
 
@@ -179,8 +209,47 @@
                                     <i class="fa fa-check mr-2 text-light"></i>Security
                                 </li>
                             </ul>
-                            <a href="mailto:info@milusystem.com?subject=Price 199$ Basic"
-                                class="btn btn-light btn-block p-2 shadow rounded-pill">Subscribe</a>
+                            <button type="button" class="btn btn-light btn-block p-2 shadow rounded-pill"
+                                data-toggle="modal" data-target="#controldehora">
+                                Details
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="controldehora" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog  modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="text-center" id="titulo">Control de Horas</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="text-left">
+                                                It is a web tool that allows automating processes
+                                                daily registration of employees' entry and exit, showing
+                                                reports
+                                                that streamline and optimize Human Resources and Accounting tasks
+                                                for
+                                                the preparation of forms and payment of these.
+                                            </div>
+                                            <br>
+                                            <div class="text-center">
+                                                <img width="400" height="200"
+                                                    src="assets/img/portfolio/fullsize/controlhrs1.PNG"
+                                                    class="img-fluid" alt="...">
+                                            </div>
+
+
+                                        </div>
+                                        <div class="modal-footer ">
+                                            <a href="mailto:info@milusystem.com?subject=Price 29.99$ Basic"
+                                                class="btn btn-dark btn-block p-2 shadow rounded-pill">Subscribe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- END -->
@@ -197,7 +266,7 @@
 
                             <ul class="list-unstyled my-5 text-small text-light text-left font-weight-normal">
                                 <li class="mb-3">
-                                    <i class="fa fa-check mr-2 text-light"></i> 
+                                    <i class="fa fa-check mr-2 text-light"></i>
                                     Pack hours control
                                 </li>
                                 <li class="mb-3">
@@ -216,8 +285,49 @@
                                     <i class="fa fa-check mr-2 text-light"></i>Weekly Backup
                                 </li>
                             </ul>
-                            <a href="mailto:info@milusystem.com?subject=Price 399$ Pro"
-                                class="btn btn-light btn-block p-2 shadow rounded-pill">Subscribe</a>
+                            <button type="button" class="btn btn-light btn-block p-2 shadow rounded-pill"
+                                data-toggle="modal" data-target="#pro">
+                                Details
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="pro" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog  modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="text-center" id="titulo">Pro</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="text-left">
+
+                                                It is a module that includes the Time Management package, a tool
+                                                that automates daily check-in and check-out processes
+                                                collaborators, providing data that streamlines and optimizes
+                                                the Human Resources and Accounting areas. Includes a module for
+                                                invoice products or services; in case of choosing the first, the system
+                                                provides reports that allow evaluating the flow of movement of each
+                                                item, as well as a space / window to view the stock of
+                                                these; however, if the sale of services is chosen, the reports
+                                                estimate the productivity in date ranges of each employee for / with
+                                                the service.
+                                            </div>
+                                            <br>
+                                            <img width="100" height="40" src="assets/img/portfolio/fullsize/pro2.PNG"
+                                                class="img-fluid" alt="...">
+                                            <img width="300" height="100" src="assets/img/portfolio/fullsize/pro.PNG"
+                                                class="img-fluid" alt="...">
+                                        </div>
+                                        <div class="modal-footer ">
+                                            <a href="mailto:info@milusystem.com?subject=Price 54.99$ Pro"
+                                                class="btn btn-dark btn-block p-2 shadow rounded-pill">Subscribe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- END -->
@@ -226,7 +336,7 @@
                     <!-- Pricing Table-->
                     <div class="col-lg-4">
                         <div class="bg-dark p-5 rounded-lg shadow">
-                            <h1 class="h6 text-uppercase font-weight-bold text-light mb-4">Enterprise</h1>
+                            <h1 class="h6 text-uppercase font-weight-bold text-light mb-4">Enterprice</h1>
                             <h2 class="h1 font-weight-bold text-light">$69.99<span
                                     class="text-small text-light font-weight-normal ml-2">/ month</span></h2>
 
@@ -246,15 +356,52 @@
                                     <i class="fa fa-check mr-2 text-light"></i>Returns & refunds
                                 </li>
                                 <li class="mb-3 text-light">
-                                    <i class="fa fa-check mr-2 text-light"></i>Cash balance 
+                                    <i class="fa fa-check mr-2 text-light"></i>Cash balance
                                 </li>
                                 <li class="mb-3 text-light">
                                     <i class="fa fa-check mr-2 text-light"></i>
                                     Analytics
                                 </li>
                             </ul>
-                            <a href="mailto:info@milusystem.com?subject=Price 899$ Enterprise"
-                                class="btn btn-light btn-block p-2 shadow rounded-pill">Subscribe</a>
+                            <button type="button" class="btn btn-light btn-block p-2 shadow rounded-pill"
+                                data-toggle="modal" data-target="#enterprise">
+                                Details
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="enterprise" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog  modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="text-center" id="titulo">Enterprise</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="text-left">
+                                                It is a web tool that allows automating processes
+                                                daily registration of employees' entry and exit, showing
+                                                reports
+                                                that streamline and optimize Human Resources and Accounting tasks
+                                                for
+                                                the preparation of forms and payment of these.
+                                            </div>
+                                            <br>
+                                            <img width="100" height="80" src="assets/img/portfolio/fullsize/enterprise2.PNG"
+                                                class="img-fluid" alt="...">
+                                            <img width="300" height="100" src="assets/img/portfolio/fullsize/enterprise.PNG"
+                                                class="img-fluid" alt="...">
+
+                                        </div>
+                                        <div class="modal-footer ">
+                                            <a href="mailto:info@milusystem.com?subject=Price 69.99$ Enterprice"
+                                                class="btn btn-dark btn-block p-2 shadow rounded-pill">Subscribe</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- END -->
